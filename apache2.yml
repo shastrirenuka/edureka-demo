@@ -1,0 +1,39 @@
+---
+- hosts: 172.31.25.137
+  become: true
+  vars:
+    src_path: /home/edureka
+    dst_path: /var/www/html
+  tasks:
+
+##The below task is to install multiple packages using loop.
+  - name: Install Packages
+    package: name={{ item }} update_cache=yes state=latest
+    loop: ['apache2', 'vim', 'screen']
+    tags: ['setup']
+
+  - name: Copy Index Page
+    copy:
+       src: {{src_path}}/index.html
+       dest: {{dst_path}}/index.html
+       owner: root
+       group: root
+       mode: '0644'
+    tags: ['update', 'sync']
+
+  - name: Start the services
+    service: name=apache2 state=started enabled=yes
+    tags: ['service']
+
+  - name: Changing Port Number
+    lineinfile:
+       path: /etc/apache2/ports.conf
+       regexp: '^Listen'
+       insertafter: '^#Listen'
+       line: Listen 83
+    notify: Restart apache2
+    tags: ['update', 'sync']
+
+  handlers:
+  - name: Restart apache2
+    service: name=apache2 state=restarted

@@ -1,0 +1,71 @@
+178  wget https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war
+  179  pwd
+  180  ls
+  181  pwd
+  182  ls
+  183  vi Dockerfile
+  184  pwd
+  185  ls
+  186  cat Dockerfile
+  187  pwd
+  188  ls
+  189  docker image build --help
+  190  docker image build -t edureka_demo .
+  191  docker image ls
+  192  pwd
+  193  ls
+  194  docker image ls
+  195  docker container run -d --name sample-app -p 8090:8080 edureka_demo
+  196  docker container ls
+  197  docker container ls -a
+  198  docker container logs sample-app
+  199  ls
+  200  cat Dockerfile
+  201  docker container rm sample-app
+  202  docker container ls
+  203  docker container ls -a
+  204  ls
+  205  vi Dockerfile
+  206  docker image rm edureka_demo:latest
+  207  docker image build -t edureka_demo .
+  208  docker image ls
+  209  docker container run -d --name sample-app -p 8090:8080 edureka_demo
+  210  docker container ls
+  211  docker container ls -a
+  212  docker container logs sample-app
+  213  docker container rm sample-app
+  214  docker container run -d --name sample-app -p 8090:8080 --privileged edureka_demo
+  215  docker container ls
+  216  docker container ls
+  217  docker container ls -l
+  218  docker container stop sample-app
+  219  docker container start sample-app
+  220  cd ..
+  221  ls
+  222  mkdir apache2
+  223  cd apache2/
+  224  ls
+  225  vi index.html
+  226  pwd
+  227  ls
+  228  vi Dockerfile
+  229  pwd
+  230  ls
+  231  docker image build -t edureka_apache2 .
+  232  docker image l
+  233  docker image ls
+  234  docker container run -d --name websvc -p 8005:80 edureka_apache2
+  235  docker container ls
+  236  docker image ls
+  237  docker container ls
+  238  docker image ls
+  239  docker container run -d --name websvc1 -p 8006:80 edureka_apache2
+  240  docker container run -d --name websvc2 -p 8007:80 edureka_apache2
+  241  docker container run -d --name websvc3 -p 8007:80 edureka_apache2
+  242  docker image ls
+  243  docker container ls
+  244  docker volume ls
+  245  docker network ls
+  246  cd ..
+  247  cat package/Dockerfile
+  248  cat apache2/Dockerfile

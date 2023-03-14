@@ -114,3 +114,17 @@
   778  ls
   779  cat Dockerfile
   780  history
+
+
+Slave1 Command History
+
+ 32  docker system info
+   33  docker swarm join --token SWMTKN-1-2rp4dhcqz3xks2foqp19opvwq00is52thr9giqs89t9u7nd5q2-c1yoxd2ujtkfsp9ej7n2c2k5r 172.31.18.51:2377
+   34  docker system info
+   35  docker container ls
+   36  docker container stop mysvc.3.pf7ozcc2vojr0223lhtwom0ew
+   37  docker container ls
+   38  docker swarm leave
+   39  history
+   40  docker swarm join --token SWMTKN-1-2rp4dhcqz3xks2foqp19opvwq00is52thr9giqs89t9u7nd5q2-c1yoxd2ujtkfsp9ej7n2c2k5r 172.31.18.51:2377
+   41  history

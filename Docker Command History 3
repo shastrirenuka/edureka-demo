@@ -1,0 +1,116 @@
+ 665  docker network ls
+  666  docker network inspect bridge
+  667  sudo sysctl -a
+  668  sudo sysctl -a | grep ip_forward
+  669  sudo sysctl -a | grep -i forward
+  670  docker container ls
+  671  docker container ls -a
+  672  docker container prune
+  673  docker container run -d --name mysvc -p 80:80 nginx
+  674  docker container ls -l
+  675  docker network inspect bridge
+  676  sudo iptables -t nat -L | grep 80
+  677  docker network create my-net
+  678  docker network ls
+  679  docker network inspect bridge
+  680  docker network inspect my-net
+  681  docker container run -d --name websvc --network my-net -p 81:80 nginx
+  682  docker network inspect my-net
+  683  ifconfig
+  684  docker container stop websvc
+  685  docker network prune
+  686  docker network ls
+  687  docker network inspect host
+  688  docker container run -d --name edureka --network host nginx
+  689  ifconfig ens5
+  690  curl 172.31.18.51:80
+  691  sudo apt list --installed nginx
+  692  sudo apt list --installed nginx apache2
+  693  sudo systemctl status apache2
+  694  netstat -antup | grep 80
+  695  docker container exec -it edureka -- ifconfig
+  696  docker container exec -it edureka bash -- ifconfig
+  697  docker container exec -it edureka ifconfig
+  698  docker container ls
+  699  docker container ls -a
+  700  docker container start edureka
+  701  docker container ls
+  702  docker container logs edureka
+  703  docker container ls
+  704  docker container stop mysvc
+  705  docker container start edureka
+  706  docker container ls
+  707  docker container inspect edureka
+  708  docker container exec -it edureka ifconfig
+  709  docker container exec -it edureka ip addr
+  710  docker container exec -it edureka bash
+  711  curl kslave1:80
+  712  curl kmaster:80
+  713  history
+  714  docker container run -d --name edureka_test --network host nginx
+  715  docker container ls -l
+  716  docker container logs edureka_test
+  717  docker image history nginx
+  718  which docker
+  719  which dockerd
+  720  which docker-compose
+  721  mkdir compose
+  722  mv compose wordpress
+  723  cd wordpress/
+  724  pwd
+  725  vi docker-compose.yaml
+  726  docker-compose --help
+  727  pwd
+  728  ls
+  729  cat docker-compose.yaml
+  730  docker-compose up -d
+  731  vi docker-compose.yaml
+  732  docker-compose up -d
+  733  docker container ls
+  734  docker-compose down
+  735  docker container ls
+  736  docker volume ls
+  737  sudo -i
+  738  docker-compose up -d
+  739  docker network ls
+  740  docker network inspect wordpress_default
+  741  cat docker-compose.yaml
+  742  ls
+  743  vi docker-compose.yaml
+  744  cd
+  745  pwd
+  746  hostname
+  747  sudo systemctl status docker
+  748  docker system info
+  749  docker swarm init
+  750  docker node ls
+  751  docker system info
+  752  docker node ls
+  753  docker service create mysvc -p 8001:80 --replicas 3 nginx
+  754  docker service ls
+  755  docker service rm zealous_curran
+  756  docker service create --help
+  757  docker service create -p 8001:80 --name mysvc --replicas=3 nginx
+  758  docker service ls
+  759  docker service ps mysvc
+  760  docker node ls
+  761  docker node update --availability drain kslave1
+  762  docker node ls
+  763  docker service ps mysvc
+  764  docker container ls
+  765  docker node ls
+  766  docker node rm kslave1
+  767  docker node ls
+  768  docker swarm join-token worker
+  769  docker node ls
+  770  docker service ps mysvc
+  771  docker service ls
+  772  docker service scale mysvc=5
+  773  docker service ls
+  774  docker service ps mysvc
+  775  cd package/
+  776  ls
+  777  cat Dockerfile
+  778  ls
+  779  cat Dockerfile
+  780  history

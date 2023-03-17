@@ -1,0 +1,123 @@
+ 526  docker search nginx
+  527  docker search redis
+  528  pwd
+  529  ls
+  530  docker image pull nginx
+  531  docker network ls
+  532  docker system info
+  533  docker image ls
+  534  sudo -i
+  535  docker image ls
+  536  ls
+  537  docker image tag edureka_apache2 edurekadevops/edureka-demo:edureka_apache2
+  538  docker image ls
+  539  docker login
+  540  docker image push edurekadevops/edureka-demo:edureka_apache2
+  541  docker image rm edurekadevops/edureka-demo:edureka_apache2
+  542  docker image ls
+  543  docker image --help
+  544  docker image ls
+  545  docker image save -o edureka_apache2.tgz edureka_apache2
+  546  pwd
+  547  ls
+  548  scp edureka_apache2.tgz kslave1:/tmp
+  549  history
+  550  docker image tag edureka_apache2 edurekadevops/test:edureka_apache2
+  551  docker image push edurekadevops/test:edureka_apache2
+  552  docker image ls
+  553  docker image push nginx:latest
+  554  docker image ls
+  555  docker image rm nginx
+  556  docker image ls
+  557  docker image rm edureka_apache2:latest
+  558  docker image prune -a
+  559  docker image ls
+  560  docker container ls
+  561  docker container run -d --name websvc nginx
+  562  docker container ls
+  563  docker container ls -a
+  564  docker container prune
+  565  docker container run -d --name websvc nginx
+  566  docker container ls
+  567  docker image rm nginx
+  568  docker image ls
+  569  docker system df
+  570  docker image ls
+  571  pwd
+  572  ls
+  573  docker container ls
+  574  docker container stop websvc && docker container rm websvc
+  575  docker container run -d nginx
+  576  docker container ls -l
+  577  docker container run nginx
+  578  docker container ls -l
+  579  docker container ls
+  580  docker container --help
+  581  docker container ls
+  582  docker container inspect f0d75087245c
+  583  docker image ls
+  584  docker image inspect edureka_demo:latest
+  585  docker image history edureka_demo:latest
+  586  docker container inspect f0d75087245c
+  587  curl 172.17.0.2:80
+  588  docker image ls
+  589  docker container ls
+  590  curl 172.17.0.2:80
+  591  docker container exec -it infallible_cohen bash
+  592  curl 172.17.0.2:80
+  593  vi index.html
+  594  docker container cp index.html infallible_cohen:/usr/share/nginx/html
+  595  curl 172.17.0.2:80
+  596  docker container --help
+  597  docker container ls
+  598  sudo systemctl restart docker
+  599  docker container ls
+  600  docker container ls -a
+  601  docker container start infallible_cohen
+  602  docker container ls -l
+  603  docker container ls
+  604  docker container update --restart=always infallible_cohen
+  605  docker container ls
+  606  sudo systemctl restart docker
+  607  docker container ls
+  608  docker container run -d --name mywebsvc -P nginx
+  609  docker container ls -l
+  610  docker container inspect mywebsvc
+  611  curl 172.17.0.3:80
+  612  ifconfig ens5
+  613  curl 172.31.18.51:32768
+  614  sudo netstat -antup
+  615  docker container ls
+  616  docker container stop mywebsvc infallible_cohen
+  617  docker container prune
+  618  docker container run -itd --name edureka ubuntu
+  619  docker container ls -l
+  620  docker container attach edureka
+  621  docker container run -it --name bhasker ubuntu
+  622  docker container ls
+  623  docker container stop bhasker edureka
+  624  docker container prune
+  625  docker volume create datavol
+  626  docker volume ls
+  627  docker volume inspect datavol
+  628  netstat -antup | grep 80
+  629  sudo systemctl status apache2 nginx
+  630  sudo systemctl stop apache2 && sudo systemctl disable apache2
+  631  netstat -antup | grep 80
+  632  docker volume ls
+  633  docker container run -d --name mysvc -p 80:80 --mount src=datavol,destination=/usr/share/nginx/html nginx
+  634  docker container exec -it mysvc bash
+  635  sudo -i
+  636  docker container ls -l
+  637  docker container inspect mysvc
+  638  curl 172.17.0.2:80
+  639  ifconfig ens5
+  640  curl 172.31.18.51:80
+  641  docker container stop mysvc && docker container rm mysvc
+  642  curl 172.31.18.51:80
+  643  docker volume ls
+  644  docker volume inspect datavol
+  645  sudo ls -l /var/lib/docker/volumes/datavol/_data
+  646  df -hT
+  647  history
+edureka@kmaster:~$
